@@ -19,5 +19,5 @@ var lengthOfLastWord = function (s) {
         }
     }
 
-    return length
+    return length;
 };
