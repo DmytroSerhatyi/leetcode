@@ -5,7 +5,7 @@ class Solution {
 
     for (int i = 0; i < m; i++) {
       for (int j = 0; j < n; j++) {
-        int neighbourCont = 0;
+        int neighbourCount = 0;
         int current = board[i][j];
 
         for (int k = i - 1; k <= i + 1; k++) {
@@ -14,11 +14,11 @@ class Solution {
               continue;
             }
 
-            neighbourCont += getNeighbour(k, l, board);
+            neighbourCount += getNeighbour(k, l, board);
           }
         }
 
-        if ((current == 1 && (neighbourCont == 2 || neighbourCont == 3)) || (current == 0 && neighbourCont == 3)) {
+        if ((current == 1 && (neighbourCount == 2 || neighbourCount == 3)) || (current == 0 && neighbourCount == 3)) {
           board[i][j] = current | 2;
         }
       }
